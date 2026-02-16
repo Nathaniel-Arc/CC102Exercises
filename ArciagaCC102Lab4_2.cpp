@@ -36,13 +36,14 @@ int main() {
 
         } while (more == 'y' || more == 'Y');
 
-        cout << "\n\nSalesperson\n";
+        cout << "\n------------------------------------------------------------\n";
         cout << setw(10) << "Product";
 
-        for (int s = 0; s < SALESPERSONS; s++) {
+        for (int s = 0; s < SALESPERSONS; s++)
             cout << setw(10) << s + 1;
-        }
+
         cout << setw(10) << "Total\n";
+        cout << "------------------------------------------------------------\n";
 
         double grandTotal = 0;
 
@@ -59,16 +60,19 @@ int main() {
             grandTotal += rowTotal;
         }
 
+        cout << "------------------------------------------------------------\n";
+
         cout << setw(10) << "Total";
         for (int j = 0; j < SALESPERSONS; j++) {
             double colTotal = 0;
-            for (int i = 0; i < PRODUCTS; i++) {
+            for (int i = 0; i < PRODUCTS; i++)
                 colTotal += sales[i][j];
-            }
+
             cout << setw(10) << colTotal;
         }
 
         cout << setw(10) << grandTotal << endl;
+        cout << "------------------------------------------------------------\n";
 
         cout << "\nRun program again? [Y/y]: ";
         cin >> choice;
