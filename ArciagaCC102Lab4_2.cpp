@@ -70,7 +70,7 @@ int main() {
 
         cout << setw(10) << grandTotal << endl;
 
-        cout << "\nRun program again? (y/n): ";
+        cout << "\nRun program again? [Y/y]: ";
         cin >> choice;
 
     } while (choice == 'y' || choice == 'Y');
